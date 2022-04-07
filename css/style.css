@@ -301,9 +301,7 @@ body {
 
 }
 
-@media only screen and (max-width: 600px) {
-  .main-nav__item {
-  }
+@media only screen and (max-width: 1000px) {
   .main-section {
    flex-direction: column;
  }
