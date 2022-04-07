@@ -116,6 +116,7 @@ body {
   flex-direction: column;
   height: 100%;
   padding: 10px 15px auto 15px;
+  width: 400px;
 }
 
 .main-nav-container {
@@ -126,6 +127,7 @@ body {
    border-bottom: 1px solid #333;
    background: var(--dark-bg-1);
    font-size: 16px;
+   height: 60px;
 }
 
 .page-title {
@@ -303,7 +305,7 @@ body {
 }
 
 @media only screen and (max-width: 1000px) {
-  .main-nav-container {
+  /* .main-nav-container {
     font-size: 25px;
   }
 
@@ -317,5 +319,5 @@ body {
 
  .inputs-section {
    flex-grow: 3;
- }
+ } */
 }
