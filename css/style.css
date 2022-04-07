@@ -302,6 +302,10 @@ body {
 }
 
 @media only screen and (max-width: 1000px) {
+  .main-nav-container {
+    font-size: 25px;
+  }
+ 
   .main-section {
    flex-direction: column;
  }
