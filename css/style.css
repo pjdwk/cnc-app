@@ -305,6 +305,10 @@ body {
   .main-nav-container {
     font-size: 25px;
   }
+
+  .main-nav__item {
+    flex-grow: 2;
+  }
  
   .main-section {
    flex-direction: column;
