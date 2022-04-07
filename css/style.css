@@ -215,6 +215,7 @@ body {
   padding: 10px 10px;
   align-items: center;
   flex-direction: column;
+  font-size: .9rem;
 }
 
 .inputs__heading {
@@ -237,7 +238,7 @@ body {
 .input_item-head {
   /* margin: 5px; */
   font-weight: 500;
-  font-size: .9rem;
+  /* font-size: .9rem; */
   min-width: 15ch;
   display: flex;
   align-items: center;
@@ -254,7 +255,7 @@ body {
   width: 15ch;
   color: var(--black-1);
   border: 1px solid var(--black-2);
-  font-size: .9rem;
+  /* font-size: .9rem; */
   /* margin: 5px 0 10px 0; */
 }
 
@@ -307,12 +308,14 @@ body {
   }
 
   .main-nav__item {
-    flex-grow: 2;
+    flex-grow: 3;
   }
  
   .main-section {
    flex-direction: column;
  }
 
-
+ .inputs-section {
+   flex-grow: 3;
+ }
 }
