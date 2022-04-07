@@ -125,6 +125,7 @@ body {
    width: 100%;
    border-bottom: 1px solid #333;
    background: var(--dark-bg-1);
+   font-size: 16px;
 }
 
 .page-title {
@@ -138,7 +139,6 @@ body {
   justify-content: flex-end;
   align-items: center;
   /* height: 100%; */
-  
   width: 100%;
   padding: 0 20px;
   
@@ -146,7 +146,7 @@ body {
 .main-nav a {
   text-decoration: none;
   color: #000;
-  font-size: .9rem;
+  /* font-size: .9rem; */
 }
 
 .submit-container {
@@ -180,7 +180,7 @@ body {
   font-weight: 700;
   display: flex;
   align-items: center;
-  font-size: 1.rem;
+  /* font-size: 1.rem; */
   font-weight: 500;
   margin: 15px;
   padding: 5px 10px;
@@ -302,8 +302,8 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
- .
- 
+  .main-nav__item {
+  }
   .main-section {
    flex-direction: column;
  }
