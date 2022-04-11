@@ -101,7 +101,7 @@ body {
 
 .header {
   grid-column: 1/13;
-  height: 60px;
+  min-height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -237,6 +237,17 @@ body {
   line-height: 1.75;
   font-size: .9rem;
   /* word-wrap: normal; */
+}
+
+.footer {
+  grid-column: 1/13;
+  background: var(--nav-grey);
+  min-height: 60px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--nav);
 }
 
 
