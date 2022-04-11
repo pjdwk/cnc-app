@@ -17,178 +17,183 @@
 </head>
 <body class="okuma">
 
-  <header class="header">
-    <div class="header-icon">
-      <i class="fa-solid fa-cube"></i>
-    </div>
-    <nav class="nav-container">
-      <ul class="nav">
-        <a href="index.html">
-          <li class="nav-item nav-home">Home</li>
-        </a>
-        <a href="haas.html">
-          <li class="nav-item nav-haas">Haas</li>
-        </a>
-        <a href="okuma.html">
-          <li class="nav-item nav-okuma">Okuma</li>
-        </a>
-        <a href="toshiba.html">
-          <li class="nav-item nav-toshiba">Toshiba</li>
-        </a>
-      </ul>
-    </nav>
-  </header>
+  <div class="container">
+    <header class="header">
+      <div class="header-icon">
+        <i class="fa-solid fa-cube"></i>
+      </div>
+      <nav class="nav-container">
+        <ul class="nav">
+          <a href="index.html">
+            <li class="nav-item nav-home">Home</li>
+          </a>
+          <a href="haas.html">
+            <li class="nav-item nav-haas">Haas</li>
+          </a>
+          <a href="okuma.html">
+            <li class="nav-item nav-okuma">Okuma</li>
+          </a>
+          <a href="toshiba.html">
+            <li class="nav-item nav-toshiba">Toshiba</li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+  
+    <main class="main">
+      <aside class="aside">
+        <form class="form">
+          <div class="form-section">
+            <h3 class="form-head">Rough Dimensions</h3>
+            <div class="form-sec-input-sec">
+              <label class="btn btn--o1" for="r-ht">HT</label>         
+              <input type="number" id="r-ht" name="r-ht" pattern="">
+            </div>
+            <div class="form-sec-input-sec">
+              <label class="btn btn--o2" for="r-wt">ID</label>
+              <input type="number" id="r-wt" name="r-wt">
+            </div>
+            <div class="form-sec-input-sec">
+              <label class="btn btn--o3" for="r-odp">ODP</label>
+              <input type="number" id="r-od" name="r-odp" pattern="">
+            </div>
+            <div class="form-sec-input-sec">
+              <label class="btn btn--o4" for="r-odf">ODF</label>
+              <input type="number" id="r-odf" name="r-odf">
+            </div>
+            <div class="form-sec-input-sec">
+              <label class="btn btn--o5" for="r-oal">OAL</label>
+              <input type="number" id="r-oal" name="r-oal" pattern="">
+            </div>
+          </div>
+          <div class="form-section">
+            <h3 class="form-head">Finish Dimensions</h3>
+            <div class="form-sec-input-sec">
+              <label class="btn btn--g1" for="f-ht">HT</label>         
+              <input type="number" id="f-ht" name="f-ht" pattern="">
+            </div>
+            <div class="form-sec-input-sec">
+              <label class="btn btn--g2" for="f-wt">ID</label>
+              <input type="number" id="f-wt" name="f-wt">
+            </div>
+            <div class="form-sec-input-sec">
+              <label class="btn btn--g3" for="f-odp">ODP</label>
+              <input type="number" id="f-odp" name="f-odp" pattern="">
+            </div>
+            <div class="form-sec-input-sec">
+              <label class="btn btn--g4" for="f-odf">ODF</label>
+              <input type="number" id="f-odf" name="f-odf">
+            </div>
+            <div class="form-sec-input-sec">
+              <label class="btn btn--g5" for="f-oal">OAL</label>
+              <input type="number" id="f-oal" name="f-oal" pattern="">
+            </div>
+          </div>
+          <div class="submit-btn btn" type="submit" id="submit">Submit</div>
+        </form>
+      </aside>
+  
+      <section class="code-sec">
+  
+        (SDR 11-18 OP1)(V2.0 PIPE) <br>
+        <br>
+        <span class="comment-line">(===========================================)</span> <br>
+        (N1212 - FINISH ODF) (N1211 ROUGH HUB FACE) <br>
+        (N202 - SERRATIONS) (N1213 - DEBURR) <br>
+        (43T - 200PSI - OAL = 13.05) <br>
+        (LOAD PIPE SIDE)(AVS) <br>
+        (NO LIVE TOOLING) <br>
+        <span class="comment-line">(===========================================)</span> <br>
+        <br>
+        G270 <br>
+        CLEAR <br>
+        DRAW <br>
+        <br>
+        <br>
+        N1212 (T12 - FINISH ODF - N1212) <br>
+        G00 X100. Z100. <br>
+        T1212 <br>
+        G50 S455 <br>
+        G97 S450 M04 M42 <br>
+        G00 X100. Z100. <br>
+        G00 <dfn title="Rough ODF"><span class="btn btn-1">X<span class="rough-odf">21.798</span></span></dfn> 
+          <span class="btn btn-4">Z<span class="z-start-odf">.9</span></span> <br>
+        G01 <span class="btn btn-2">Z-<span class="hub-t">3.5</span></span> F.05 <br>
+        G00 <span class="btn btn-calc">X<span class="rough-odf--add">21.9</span></span> 
+          <span class="btn btn-4">Z<span class="z-start-odf">.9</span></span> <br> 
+        G00 <span class="btn btn-3">X<span class="finish-odf">21.198</span></span>
+          <span class="btn btn-4">Z<span class="z-start-odf">.9</span></span> <br>
+        G74 <span class="btn btn-3">X<span class="finish-odf">21.198</span></span> 
+          <span class="btn btn-2">Z-<span class="hub-t">3.5</span></span> I.6 D.035 F.1 E.2 <br>
+        G00 <span class="btn btn-4">Z<span class="z-start-odf">.9 </span></span> <br>
+        G00 <span class="btn btn-calc">X<span class="rough-odf--add">21.9</span></span> <br>
+        G00 X100. Z100. <br>
+        M01 <br>
+        <br>
+        <br>
+        N1211 (T12 - ROUGH HUB FACE - N1211) <br>
+        G00 X100. Z100. <br>
+        T1211 <br>
+        G50 S455 <br>
+        G97 S450 M04 M42 <br>
+        G00 X100. Z100. <br>
+        G00 <span class="btn btn-calc">X<span class="fin-odf--add">21.248</span></span> 
+          <span class="btn btn-7">Z<span class="rough-zfin">.615</span></span> <br>
+        G01 <span class="btn btn-calc">X<span class="rough-id--sub">12.798</span></span> F.045 <br>
+        
+       
+        G00 <span class="btn btn-3">X<span class="finish-odf">20.598</span></span>
+          <span class="btn btn-calc">Z<span class="rough-zfin--add">.655</span></span> <br>
+        G74 <span class="btn btn-calc">X<span class="rough-id--sub">12.798</span></span> Z0.015 I.6 D.035 F.1 E.2  <br>
+        G00 <span class="btn btn-calc">Z<span class="rough-zfin--add">.9</span></span> <br>
+        G00 <span class="btn btn-calc">X<span class="fin-odf--add">22.6</span></span> <br>
+        G00 X100. Z100. <br>
+        M01 <br>
+        <br>
+        <br>
+  
+        N202 (T2 - SERRATIONS)<br>
+        G00 X100. Z100.<br>
+        T0202<br>
+        G50 S600<br>
+        G97 S300 M04<br>
+        G00 <span class="btn btn-6">X<span class="rough-id">13.36</span></span> Z.25<br>
+        G01 Z0. F.25<br>
+        G01 <span class="btn btn-calc">X<span class="fin-odf--add">21.298</span></span> F.043<br>
+        G00 X100. Z100.<br>
+        M01<br>
+        <br>
+        <br>
+        N1213 (T12 - DEBURR - N1212)<br>
+        G00 X100. Z100.<br>
+        T1212<br>
+        G50 S450<br>
+        G97 S300 M04 M42<br>
+        G00 X100. Z100.<br>
+        G00 <span class="btn btn-calc">X<span class="fin-odf--add">21.6</span></span> Z.2<br>
+        G01 <span class="btn btn-calc">X<span class="deburr">20.878</span></span> Z-.14 F.3<br>
+        G04 F.5<br>
+        G00 X100. Z100.<br>
+        M05 M01<br> 
+        <br>
+        <br>
+        M91<br>
+        M30<br>
+  
+  
+  
+      </section>
+    </main>
 
-  <main class="main">
-    <aside class="aside">
-      <form class="form">
-        <div class="form-section">
-          <h3 class="form-head">Rough Dimensions</h3>
-          <div class="form-sec-input-sec">
-            <label class="btn btn--o1" for="r-ht">HT</label>         
-            <input type="number" id="r-ht" name="r-ht" pattern="">
-          </div>
-          <div class="form-sec-input-sec">
-            <label class="btn btn--o2" for="r-wt">ID</label>
-            <input type="number" id="r-wt" name="r-wt">
-          </div>
-          <div class="form-sec-input-sec">
-            <label class="btn btn--o3" for="r-odp">ODP</label>
-            <input type="number" id="r-od" name="r-odp" pattern="">
-          </div>
-          <div class="form-sec-input-sec">
-            <label class="btn btn--o4" for="r-odf">ODF</label>
-            <input type="number" id="r-odf" name="r-odf">
-          </div>
-          <div class="form-sec-input-sec">
-            <label class="btn btn--o5" for="r-oal">OAL</label>
-            <input type="number" id="r-oal" name="r-oal" pattern="">
-          </div>
-        </div>
-        <div class="form-section">
-          <h3 class="form-head">Finish Dimensions</h3>
-          <div class="form-sec-input-sec">
-            <label class="btn btn--g1" for="f-ht">HT</label>         
-            <input type="number" id="f-ht" name="f-ht" pattern="">
-          </div>
-          <div class="form-sec-input-sec">
-            <label class="btn btn--g2" for="f-wt">ID</label>
-            <input type="number" id="f-wt" name="f-wt">
-          </div>
-          <div class="form-sec-input-sec">
-            <label class="btn btn--g3" for="f-odp">ODP</label>
-            <input type="number" id="f-odp" name="f-odp" pattern="">
-          </div>
-          <div class="form-sec-input-sec">
-            <label class="btn btn--g4" for="f-odf">ODF</label>
-            <input type="number" id="f-odf" name="f-odf">
-          </div>
-          <div class="form-sec-input-sec">
-            <label class="btn btn--g5" for="f-oal">OAL</label>
-            <input type="number" id="f-oal" name="f-oal" pattern="">
-          </div>
-        </div>
-        <div class="submit-btn btn" type="submit" id="submit">Submit</div>
-      </form>
-    </aside>
-
-    <section class="code-sec">
-
-      (SDR 11-18 OP1)(V2.0 PIPE) <br>
-      <br>
-      (===========================================) <br>
-      (N1212 - FINISH ODF) (N1211 ROUGH HUB FACE) <br>
-      (N202 - SERRATIONS) (N1213 - DEBURR) <br>
-      (43T - 200PSI - OAL = 13.05) <br>
-      (LOAD PIPE SIDE)(AVS) <br>
-      (NO LIVE TOOLING) <br>
-      (===========================================) <br>
-      <br>
-      G270 <br>
-      CLEAR <br>
-      DRAW <br>
-      <br>
-      <br>
-      N1212 (T12 - FINISH ODF - N1212) <br>
-      G00 X100. Z100. <br>
-      T1212 <br>
-      G50 S455 <br>
-      G97 S450 M04 M42 <br>
-      G00 X100. Z100. <br>
-      G00 <dfn title="Rough ODF"><span class="btn btn-1">X<span class="rough-odf">21.798</span></span></dfn> 
-        <span class="btn btn-4">Z<span class="z-start-odf">.9</span></span> <br>
-      G01 <span class="btn btn-2">Z-<span class="hub-t">3.5</span></span> F.05 <br>
-      G00 <span class="btn btn-calc">X<span class="rough-odf--add">21.9</span></span> 
-        <span class="btn btn-4">Z<span class="z-start-odf">.9</span></span> <br> 
-      G00 <span class="btn btn-3">X<span class="finish-odf">21.198</span></span>
-        <span class="btn btn-4">Z<span class="z-start-odf">.9</span></span> <br>
-      G74 <span class="btn btn-3">X<span class="finish-odf">21.198</span></span> 
-        <span class="btn btn-2">Z-<span class="hub-t">3.5</span></span> I.6 D.035 F.1 E.2 <br>
-      G00 <span class="btn btn-4">Z<span class="z-start-odf">.9 </span></span> <br>
-      G00 <span class="btn btn-calc">X<span class="rough-odf--add">21.9</span></span> <br>
-      G00 X100. Z100. <br>
-      M01 <br>
-      <br>
-      <br>
-      N1211 (T12 - ROUGH HUB FACE - N1211) <br>
-      G00 X100. Z100. <br>
-      T1211 <br>
-      G50 S455 <br>
-      G97 S450 M04 M42 <br>
-      G00 X100. Z100. <br>
-      G00 <span class="btn btn-calc">X<span class="fin-odf--add">21.248</span></span> 
-        <span class="btn btn-7">Z<span class="rough-zfin">.615</span></span> <br>
-      G01 <span class="btn btn-calc">X<span class="rough-id--sub">12.798</span></span> F.045 <br>
-      <!--   May not need the commented code   -->
-      <!--     G00 <span class="btn btn-calc">X<span class="fin-odf--add">21.248</span></span> Z.9 <br> -->
-      G00 <span class="btn btn-3">X<span class="finish-odf">20.598</span></span>
-        <span class="btn btn-calc">Z<span class="rough-zfin--add">.655</span></span> <br>
-      G74 <span class="btn btn-calc">X<span class="rough-id--sub">12.798</span></span> Z0.015 I.6 D.035 F.1 E.2  <br>
-      G00 <span class="btn btn-calc">Z<span class="rough-zfin--add">.9</span></span> <br>
-      G00 <span class="btn btn-calc">X<span class="fin-odf--add">22.6</span></span> <br>
-      G00 X100. Z100. <br>
-      M01 <br>
-      <br>
-      <br>
-
-      N202 (T2 - SERRATIONS)<br>
-      G00 X100. Z100.<br>
-      T0202<br>
-      G50 S600<br>
-      G97 S300 M04<br>
-      G00 <span class="btn btn-6">X<span class="rough-id">13.36</span></span> Z.25<br>
-      G01 Z0. F.25<br>
-      G01 <span class="btn btn-calc">X<span class="fin-odf--add">21.298</span></span> F.043<br>
-      G00 X100. Z100.<br>
-      M01<br>
-      <br>
-      <br>
-      N1213 (T12 - DEBURR - N1212)<br>
-      G00 X100. Z100.<br>
-      T1212<br>
-      G50 S450<br>
-      G97 S300 M04 M42<br>
-      G00 X100. Z100.<br>
-      G00 <span class="btn btn-calc">X<span class="fin-odf--add">21.6</span></span> Z.2<br>
-      G01 <span class="btn btn-calc">X<span class="deburr">20.878</span></span> Z-.14 F.3<br>
-      G04 F.5<br>
-      G00 X100. Z100.<br>
-      M05 M01<br> 
-      <br>
-      <br>
-      M91<br>
-      M30<br>
-
-
-
-    </section>
-  </main>
+    <footer class="footer">
+      &copy; 2022
+    </footer>
+  </div>
+  
       
-  <footer class="footer">
-    &copy; 2022
-  </footer>
+ 
 
-<script src="js/script.js"></script>
+ <script src="js/script.js"></script>
 </body>
 </html>
 
